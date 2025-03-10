@@ -36,6 +36,8 @@ services:
       container_name: nest
       environment:
         - PORT=${PORT:-3000}
+      env_file:
+        - .env
       ports:
         - '3000:3000'
       depends_on:
